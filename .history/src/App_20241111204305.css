@@ -1,0 +1,24 @@
+.carousel-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; 
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-item {
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

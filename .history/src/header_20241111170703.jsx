@@ -1,0 +1,12 @@
+const Header = ()=>{
+    return (
+        <div className='bg-[#FCFCFC] w-full rounded-[20px] px-[1.667vw] py-[2.882vw]'>
+        <div className='w-full h-full flex items-center justify-between'>
+          <div className=''><span>Gideon</span><span className=''> oladimeji</span></div>
+          <div className='flex items-center gap[1.667vw]'>
+            <div className=''></div>
+          </div>
+        </div>
+      </div>
+    );
+}
