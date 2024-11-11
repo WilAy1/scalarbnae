@@ -239,7 +239,7 @@ const ImageCarousel = ({hide}) => {
 
 
     return (
-        <div className={`relative md:w-full lg:w-auto ${hide ? "!hidden md:!block" : ""}`}>
+        <div className={`relative ${hide ? "!hidden md:!flex" : ""}`}>
           <div
             className={`rounded-[20px] z-10 relative  h-[427px] carousel-container md:w-full md:h-[458px] lg:w-[22.917vw] lg:h-[33.056vw] md:rounded-[20px] lg:rounded-[1.389vw] overflow-hidden`}
             ref={containerRef}

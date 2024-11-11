@@ -122,7 +122,7 @@ const WORK = () => {
               }
             </div>
             
-            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-0' : "h-[244px] md:h-[176px] lg:h-[16.042vw]"}`}>
+            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-0' : "md:h-[176px] lg:h-[16.042vw]"}`}>
               <img src={work.image} className='md:h-[176px] lg:h-[16.042vw] object-contain rounded-[20px] lg:rounded-[1.389vw]' alt={`${work.title}`}/>
             </div>
             <div className={`'h-[1px]' ${showIndex === key ? 'hidden' : "block"}`}></div>
@@ -239,9 +239,9 @@ const ImageCarousel = ({hide}) => {
 
 
     return (
-        <div className={`relative md:w-full lg:w-auto ${hide ? "!hidden md:!block" : ""}`}>
+        <div className="relative ">
           <div
-            className={`rounded-[20px] z-10 relative  h-[427px] carousel-container md:w-full md:h-[458px] lg:w-[22.917vw] lg:h-[33.056vw] md:rounded-[20px] lg:rounded-[1.389vw] overflow-hidden`}
+            className={`${hide ? "!hidden md:!flex" : ""} rounded-[20px] z-10 relative  h-[427px] carousel-container md:w-full md:h-[458px] lg:w-[22.917vw] lg:h-[33.056vw] md:rounded-[20px] lg:rounded-[1.389vw] overflow-hidden`}
             ref={containerRef}
         >
             {images.map((src, index) => (
