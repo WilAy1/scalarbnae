@@ -11,7 +11,7 @@ import Pakt from './assets/pakt.webp';
 import Tender from './assets/tender.webp';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { SplitText } from 'gsap-trial/all';
+//import { SplitText } from 'gsap-trial/all';
 
 const WORKS = [
   {
@@ -52,7 +52,7 @@ function App() {
 
   useEffect(()=>{
 
-    gsap.registerPlugin(SplitText);
+    //gsap.registerPlugin(SplitText);
 
     // var timeline = anime.timeline({
     //   easing: "easeInOutSine",
