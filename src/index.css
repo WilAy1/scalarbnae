@@ -28,3 +28,7 @@ code {
     src: url(/src/assets/fonts/Satoshi-Variable.ttf) format("truetype");
   }
 }
+
+.anim_e1, .anim_e2, .anim_e4, .anim_e5, .anim_e6 {
+  opacity: 0;
+}

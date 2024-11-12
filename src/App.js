@@ -89,11 +89,12 @@ function App() {
 
     tl.fromTo(".anim_e3", {
       zIndex: 2,
-      scale: 1.4,
-      x: -10,
-      y: 20
+      scale: 1.7,
+      x: -30,
+      y: 40,
     }, { 
-      scale: 1
+      scale: 1,
+      duration: 2
     });
     tl.to(".anim_e3", {
       x: 0,
@@ -319,7 +320,7 @@ const ImageCarousel = ({hide}) => {
     const containerRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [Img1, Img2, Img3, Img4];
-    const delay = 3000;
+    const delay = 5000;
 
     useEffect(() => {
       const interval = setInterval(() => {
