@@ -68,6 +68,7 @@ function App() {
     tl.set([".anim_text2", ".anim_text7"], { opacity: 0, scale: 0 });
     tl.set([".anim_text1", ".anim_text3", ".anim_text4", ".anim_text5", ".anim_text8", ".anim_text11", ".anim_text12"], { opacity: 0, y: 10 });
     tl.set(Array.from({length: WORKS.length}, (_, k)=> `#anim_work${k}`), { opacity: 0, y: 20 });
+    tl.to([".anim_text9", ".anim_text10"], { opacity: 0, y: 100 })
     tl.set(".anim_e1", {
       y: 100,
     })
@@ -132,10 +133,10 @@ function App() {
     // //const chars = mySplitText.chars;
         
         
-    tl.from([".anim_text9", ".anim_text10"], {
+    tl.to([".anim_text9", ".anim_text10"], {
       duration: 1, 
-      opacity:0, 
-      y: 100, 
+      opacity:1, 
+      y: 0, 
       stagger: 0.2,
       ease: "expo.out"
     }, "initial-=0.3");
