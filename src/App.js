@@ -233,7 +233,7 @@ const WORK = () => {
               }
             </div>
             
-            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-[0px]' : "min-h-[198px] md:min-h-fit rounded-[20px] md:h-[176px] lg:h-[16.042vw]"}`} style={{boxShadow: "4px 4px 40px 5px #0000001A"}}>
+            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-[0px]' : "h-[170px] max-h-[300px] md:max-h-none rounded-[20px] md:h-[176px] lg:h-[16.042vw]"}`} style={{boxShadow: "4px 4px 40px 5px #0000001A"}}>
               <img src={work.image} className='md:h-[176px] lg:h-[16.042vw] object-contain rounded-[20px] lg:rounded-[1.389vw]' alt={`${work.title}`}   />
             </div>
           </div>
