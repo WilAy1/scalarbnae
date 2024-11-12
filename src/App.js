@@ -11,7 +11,7 @@ import Pakt from './assets/pakt.webp';
 import Tender from './assets/tender.webp';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import SplitText from 'gsap-trial/SplitText';
+import { SplitText } from 'gsap-trial/all';
 
 const WORKS = [
   {
@@ -118,6 +118,7 @@ function App() {
     tl.to(Array.from({length: WORKS.length}, (_, k)=> `#anim_work${k}`), {
        opacity: 1,
        y: 0,
+       duration: 0.7,
        stagger: {
         each: 0.3
        }
@@ -125,16 +126,16 @@ function App() {
 
 
 
-    const mySplitText = new SplitText(".anim_text9", { type: "lines",reduceWhiteSpace: false  });
-    const mySplitText2 = new SplitText(".anim_text10", { type: "lines",reduceWhiteSpace: false  });
-    //const chars = mySplitText.chars;
+    // const mySplitText = new SplitText(".anim_text9", { type: "lines",reduceWhiteSpace: true  });
+    // const mySplitText2 = new SplitText(".anim_text10", { type: "lines",reduceWhiteSpace: true  });
+    // //const chars = mySplitText.chars;
         
         
-    tl.from([mySplitText.lines, mySplitText2.lines], {
+    tl.from([".anim_text9", ".anim_text10"], {
       duration: 1, 
       opacity:0, 
       y: 100, 
-      stagger: 0.2, 
+      stagger: 0.2,
       ease: "expo.out"
     }, "initial-=0.3");
 
@@ -355,7 +356,7 @@ const ImageCarousel = ({hide}) => {
         >
             {images.map((src, index) => (
               <div className='carousel-item w-full bg-white'>
-                    <img className='object-cover w-full' src={src} alt={`Slide ${index + 1}`} key={index} />
+                    <img className={`object-cover w-full`} src={src} alt={`Slide ${index + 1}`} key={index} />
               </div>
             ))}
         </div>
