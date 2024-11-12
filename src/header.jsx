@@ -30,7 +30,7 @@ const Header = ()=>{
         
     }, [showMenu]);
     return (
-        <div className='bg-[#FCFCFC] w-full rounded-[20px] px-[24px] py-[23.5px] lg:rounded-[1.389vw] lg:px-[1.667vw] lg:py-[1.632vw] font-satoshi anim_e1'>
+        <div className='bg-[#FCFCFC] w-full rounded-[20px] px-[24px] py-[23.5px] lg:rounded-[1.389vw] lg:px-[1.667vw] lg:py-[1.632vw] font-satoshi anim_e1' style={showMenu ? {transform: "none"} : {}}>
         <div className='w-full h-full flex items-center justify-between anim_text1'>
           <div className='uppercase text-[18px] md:text-[22px] lg:text-[1.736vw]'><span className="italic font-[300]">Gideon</span><span className='font-medium'> oladimeji</span></div>
           <div className='hidden md:flex items-center md:gap-[16px] lg:gap-[1.667vw] uppercase md:text-[15px] lg:text-[1.042vw] font-[300]'>
