@@ -233,7 +233,7 @@ const WORK = () => {
               }
             </div>
             
-            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-[0px]' : "h-[244px] md:h-[176px] lg:h-[16.042vw]"}`} style={{boxShadow: "4px 4px 40px 5px #0000001A"}}>
+            <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-[0px]' : "min-h-[198px] md:min-h-fit rounded-[20px] md:h-[176px] lg:h-[16.042vw]"}`} style={{boxShadow: "4px 4px 40px 5px #0000001A"}}>
               <img src={work.image} className='md:h-[176px] lg:h-[16.042vw] object-contain rounded-[20px] lg:rounded-[1.389vw]' alt={`${work.title}`}   />
             </div>
           </div>
@@ -365,7 +365,7 @@ const ImageCarousel = ({hide}) => {
           <div className='relative bottom-[30px] lg:bottom-[2.083vw] z-20 w-full flex flex-col items-center'>
               <div className='flex items-center gap-[4px] lg:gap-[0.278vw]'>
                 {Array.from({length: 4}, (_, index)=>{
-                  return <div key={index} onClick={()=>setCurrentIndex(index)} className={`w-[9px] lg:w-[0.625vw] h-[9px] lg:h-[0.625vw] rounded-full lg:border-[0.035vw] border-[0.5px] cursor-pointer border-white ${currentIndex === index ? currentIndex < 2 ?'bg-[#FFFFFF]' : 'bg-black' : 'bg-[#0000004D]'}`}></div>
+                  return <div key={index} onClick={()=>setCurrentIndex(index)} className={`w-[9px] lg:w-[0.625vw] h-[9px] lg:h-[0.625vw] rounded-full lg:border-[0.035vw] border-[0.5px] cursor-pointer border-white ${currentIndex === index ? currentIndex < 3 ?'bg-[#FFFFFF]' : 'bg-black' : 'bg-[#0000004D]'}`}></div>
                 })}
               </div>
             </div>
