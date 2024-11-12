@@ -95,7 +95,7 @@ function App() {
       y: 40,
     }, { 
       scale: 1,
-      duration: 2
+      duration: window.innerWidth < 768 ? 0: 2
     });
     tl.to(".anim_e3", {
       x: 0,
@@ -182,7 +182,7 @@ function App() {
               <div className='italic text-[16px] lg:text-[1.736vw] font-[300] uppercase anim_text3'>
                 Two Passions, One Creative Mind:
               </div>
-              <div className='font-bold text-[32px] leading-[32px] md:text-[36px] md:leading-[36px] lg:text-[3.333vw] lg:leading-[3.333vw] anim_text4'>
+              <div className='font-bold text-[32px] leading-[32px] md:text-[33px] md:leading-[36px] lg:text-[3.333vw] lg:leading-[3.333vw] anim_text4'>
                 Senior Product Designer  | <span className='text-[#636363]'>House & Techno Music DJ</span>
               </div>
             </div>
