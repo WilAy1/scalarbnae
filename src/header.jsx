@@ -3,23 +3,23 @@ import { useState } from "react";
 const HEADER_LINKS = [
     {
         title: "Linkedin",
-        link: ""
+        link: "https://linkedin.com/in/scalarbane"
     },
     {
         title: "Youtube",
-        link: ""
+        link: "https://www.youtube.com/@scalarbane"
     },
     {
         title: "Soundcloud",
-        link: ""
+        link: "https://on.soundcloud.com/BRmC3KhY2zQvoCnHA"
     },
     {
         title: "Instagram",
-        link: ""
+        link: "https://instagram.com/scalarbane"
     },
     {
         title: "Medium",
-        link: ""
+        link: "https://medium.com/@scalarbane"
     }
 ]
 

@@ -7,6 +7,7 @@ import Img4 from './assets/img4.webp';
 import AvaBuild from './assets/avabuild.webp';
 import BetterCareer from './assets/bettercareer.webp';
 import CreateApp from './assets/createapp.webp';
+import Simfy from './assets/simfy.webp';
 import Pakt from './assets/pakt.webp';
 import Tender from './assets/tender.webp';
 import { useEffect, useRef, useState } from 'react';
@@ -17,30 +18,36 @@ const WORKS = [
   {
     title: "Avabuild",
     image: AvaBuild,
+    descrition: "Designing a blockchain powered job market place built for avalanche ecosystem",
     link: ""
   },
   {
     title: "Bettercareer.me",
     image: BetterCareer,
+    descrition: "Leading the design for an AI career optimizer to help candidate get better hiring chances",
     link: ""
   },
   {
     title: "Create.app",
     image: CreateApp,
+    descrition: "Helping developers deploy web apps faster with webhooks",
     link: ""
   },
   {
     title: "Simfy App",
-    image: null,
+    image: Simfy,
+    descrition: "Designing an application to convert digital currency to FIAT easily",
     link: ""
   },
   {
     title: "Tender V2",
     image: Tender,
+    descrition: "Designing an application to convert digital currency to FIAT easily",
     link: ""
   },
   {
     title: "Pakt",
+    descrition: "Designing a Blockchain Business Stack for Enterprise Solution",
     image: Pakt,
     link: ""
   },
@@ -64,6 +71,7 @@ function App() {
     // })
 
     const tl = gsap.timeline();
+    tl.set(".anim_e3", { x: -30, y: 40, scale: 1.5, zIndex: 2 });
     tl.set([".anim_e1", ".anim_e2", ".anim_e4", ".anim_e5", ".anim_e6"], { opacity: 0, scale: 0 })
     tl.set([".anim_text2", ".anim_text7"], { opacity: 0, scale: 0 });
     tl.set([".anim_text1", ".anim_text3", ".anim_text4", ".anim_text5", ".anim_text8", ".anim_text11", ".anim_text12"], { opacity: 0, y: 10 });
@@ -87,13 +95,7 @@ function App() {
       x: "-30vw",
       y: "-10vw",
     });
-
-    tl.fromTo(".anim_e3", {
-      zIndex: 2,
-      scale: 1.7,
-      x: -30,
-      y: 40,
-    }, { 
+    tl.to(".anim_e3", { 
       scale: 1,
       duration: window.innerWidth < 768 ? 0: 2
     });
@@ -221,18 +223,22 @@ const WORK = () => {
       <div className='flex flex-col gap-[18px] lg:gap-[2.178vw]'>
       {WORKS.map((work, key)=>{
         return (
-          <div className='border-[#CCCCCC] last:border-b-0 border-b-2 lg:border-b-[0.139vw] gap-[20px] md:gap-[6px] lg:gap-[1.1vw] flex flex-col pb-[20px] md:pb-[6px] lg:pb-[1vw] cursor-pointer items-center' id={`anim_work${key}`} key={key} onClick={()=>setShowing(key)}>
-            <div className='w-full flex items-center justify-between '>
-              <div className=''>{work.title}</div>
-              {showIndex === key &&
-                <div>
-                  <svg width="26" height="26" viewBox="0 0 26 26" className='lg:w-[1.806vw] lg:h-[1.806vw]' fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.3205 19.6796C5.98203 19.3411 5.98203 18.7923 6.3205 18.4539L17.841 6.93335H10.4C9.92135 6.93335 9.53332 6.54532 9.53332 6.06668C9.53332 5.58804 9.92135 5.20001 10.4 5.20001H19.9333C20.1632 5.20001 20.3836 5.29132 20.5462 5.45386C20.7086 5.61639 20.8 5.83682 20.8 6.06668V15.6C20.8 16.0787 20.4119 16.4667 19.9333 16.4667C19.4547 16.4667 19.0667 16.0787 19.0667 15.6V8.159L7.54614 19.6796C7.20769 20.0179 6.65895 20.0179 6.3205 19.6796Z" fill="black"/>
-                  </svg>
-                </div>
-              }
+          <div className='border-[#CCCCCC] last:border-b-0 border-b-2 lg:border-b-[0.139vw] gap-[20px] md:gap-[6px] lg:gap-[0.7vw] flex flex-col lg:last:pb-[0vw] lg:last:gap-[0.4vw] pb-[20px] md:pb-[6px] lg:pb-[1vw] cursor-pointer items-center' id={`anim_work${key}`} key={key} onClick={()=>setShowing(key)}>
+            <div className='w-full flex flex-col lg:gap-[0.55vw]'>
+              <div className='w-full flex items-center justify-between'>
+                <div className=''>{work.title}</div>
+                {showIndex === key &&
+                  <div>
+                    <svg width="26" height="26" viewBox="0 0 26 26" className='lg:w-[1.806vw] lg:h-[1.806vw]' fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.3205 19.6796C5.98203 19.3411 5.98203 18.7923 6.3205 18.4539L17.841 6.93335H10.4C9.92135 6.93335 9.53332 6.54532 9.53332 6.06668C9.53332 5.58804 9.92135 5.20001 10.4 5.20001H19.9333C20.1632 5.20001 20.3836 5.29132 20.5462 5.45386C20.7086 5.61639 20.8 5.83682 20.8 6.06668V15.6C20.8 16.0787 20.4119 16.4667 19.9333 16.4667C19.4547 16.4667 19.0667 16.0787 19.0667 15.6V8.159L7.54614 19.6796C7.20769 20.0179 6.65895 20.0179 6.3205 19.6796Z" fill="black"/>
+                    </svg>
+                  </div>
+                }
+              </div>
+              <div className={`${showIndex === key ? 'lg:block hidden' : 'hidden'} font-satoshi lg:text-[1.11vw]`}>
+                {work.descrition}
+              </div>
             </div>
-            
             <div className={`rounded-[1.111vw] overflow-hidden transition-all ${showIndex !== key ? 'h-[0px]' : "h-[170px] max-h-[300px] md:max-h-none rounded-[20px] md:h-[176px] lg:h-[16.042vw]"}`} style={{boxShadow: "4px 4px 40px 5px #0000001A"}}>
               <img src={work.image} className='md:h-[176px] lg:h-[16.042vw] object-contain rounded-[20px] lg:rounded-[1.389vw]' alt={`${work.title}`}   />
             </div>
