@@ -28,6 +28,12 @@ const WORKS = [
     link: ""
   },
   {
+    title: "Pakt",
+    descrition: "Designing a Blockchain Business Stack for Enterprise Solution",
+    image: Pakt,
+    link: ""
+  },
+  {
     title: "Create.app",
     image: CreateApp,
     descrition: "Helping developers deploy web apps faster with webhooks",
@@ -43,12 +49,6 @@ const WORKS = [
     title: "Tender V2",
     image: Tender,
     descrition: "Designing an application to convert digital currency to FIAT easily",
-    link: ""
-  },
-  {
-    title: "Pakt",
-    descrition: "Designing a Blockchain Business Stack for Enterprise Solution",
-    image: Pakt,
     link: ""
   },
 ];
